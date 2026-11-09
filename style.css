@@ -1,0 +1,406 @@
+
+/* =================================
+   1. ตั้งค่าพื้นฐานเว็บไซต์
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Tahoma, sans-serif;
+    background: #f3f5ff;
+    color: #222;
+    line-height: 1.7;
+}
+
+/* =================================
+   2. ส่วนหัวเว็บไซต์
+================================= */
+
+header {
+    background: linear-gradient(
+        135deg,
+        #101d50,
+        #315bdb,
+        #8248d8
+    );
+
+    color: white;
+    text-align: center;
+    padding: 55px 20px;
+}
+
+header h1 {
+    font-size: 36px;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+
+header p {
+    font-size: 17px;
+    opacity: 0.9;
+}
+
+/* =================================
+   3. เมนูนำทาง
+================================= */
+
+nav {
+    background: #101d50;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 24px;
+    border-radius: 8px;
+    font-size: 15px;
+    transition: background 0.25s ease,
+                color 0.25s ease,
+                transform 0.2s ease;
+}
+
+/* เมื่อนำเมาส์ไปชี้ */
+nav a:hover {
+    background: #5278ff;
+    color: white;
+}
+
+/* เมื่อกด */
+nav a:active {
+    background: #ffb703;
+    color: #101d50;
+    transform: scale(0.96);
+}
+
+/* หน้าที่กำลังเปิด */
+nav a.active {
+    background: #5278ff;
+    color: white;
+    font-weight: bold;
+}
+
+/* =================================
+   4. แบนเนอร์เว็บไซต์
+================================= */
+
+.banner {
+    width: 100%;
+    max-width: 1100px;
+    margin: 25px auto;
+    padding: 0 20px;
+}
+
+.banner img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 18px;
+    object-fit: cover;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+}
+
+/* =================================
+   5. เนื้อหาหลัก
+================================= */
+
+main {
+    max-width: 1100px;
+    margin: auto;
+    padding: 30px 20px;
+}
+
+/* =================================
+   6. หน้า Home
+================================= */
+
+.hero {
+    background: linear-gradient(
+        135deg,
+        #dce7ff,
+        #e8dcff
+    );
+
+    padding: 65px 25px;
+    text-align: center;
+    border-radius: 20px;
+    margin-bottom: 30px;
+}
+
+.hero h2 {
+    font-size: 32px;
+    color: #172b70;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    max-width: 700px;
+    margin: 15px auto 25px;
+    color: #444;
+}
+
+/* ปุ่มเริ่มต้นเรียนรู้ */
+
+.btn {
+    display: inline-block;
+    background: linear-gradient(135deg, #315bdb, #8248d8);
+    color: white;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: background 0.25s ease,
+                transform 0.2s ease;
+}
+
+.btn:hover {
+    background: #172b70;
+    transform: translateY(-3px);
+}
+
+.btn:active {
+    background: #ffb703;
+    color: #101d50;
+    transform: scale(0.96);
+}
+
+/* =================================
+   7. กล่องเนื้อหา
+================================= */
+
+.content {
+    background: white;
+    padding: 30px;
+    margin-bottom: 25px;
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+}
+
+.content h2 {
+    color: #315bdb;
+    margin-bottom: 15px;
+}
+
+/* =================================
+   8. การ์ดข้อมูล
+================================= */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(230px, 1fr)
+    );
+
+    gap: 22px;
+    margin-top: 25px;
+}
+
+.card {
+    background: #f5f7ff;
+    border: 1px solid #dce4ff;
+    padding: 25px;
+    border-radius: 15px;
+
+    transition: transform 0.25s ease,
+                box-shadow 0.25s ease,
+                border-color 0.25s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 22px rgba(49,91,219,0.15);
+    border-color: #5278ff;
+}
+
+.card h3 {
+    color: #315bdb;
+    margin-bottom: 10px;
+}
+
+/* =================================
+   9. การ์ดแนะนำ AI
+================================= */
+
+.ai-card {
+    text-align: center;
+    padding: 25px;
+}
+
+/* พื้นที่โลโก้ */
+
+.ai-logo {
+    width: 110px;
+    height: 110px;
+    background: white;
+    border-radius: 20px;
+    margin: 0 auto 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+
+    transition: transform 0.25s ease;
+}
+
+/* รูปโลโก้ */
+
+.ai-logo img {
+    width: 75px;
+    height: 75px;
+    object-fit: contain;
+}
+
+/* เอฟเฟกต์โลโก้ */
+
+.ai-card:hover .ai-logo {
+    transform: scale(1.06);
+}
+
+/* =================================
+   10. ปุ่มเข้าใช้งาน AI
+================================= */
+
+.ai-card a {
+    display: inline-block;
+    margin-top: 18px;
+    padding: 11px 30px;
+
+    background: linear-gradient(
+        135deg,
+        #315bdb,
+        #8248d8
+    );
+
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+
+    box-shadow: 0 4px 12px rgba(49,91,219,0.2);
+
+    transition: background 0.25s ease,
+                transform 0.2s ease,
+                box-shadow 0.25s ease;
+}
+
+/* ชี้เมาส์ */
+
+.ai-card a:hover {
+    background: linear-gradient(
+        135deg,
+        #8248d8,
+        #315bdb
+    );
+
+    transform: translateY(-3px);
+    box-shadow: 0 7px 15px rgba(49,91,219,0.3);
+}
+
+/* กดปุ่ม */
+
+.ai-card a:active {
+    background: #ffb703;
+    color: #101d50;
+    transform: scale(0.96);
+}
+
+/* =================================
+   11. ส่วนท้ายเว็บไซต์
+================================= */
+
+footer {
+    background: #101d50;
+    color: white;
+    text-align: center;
+    padding: 22px;
+    margin-top: 30px;
+}
+
+/* =================================
+   12. รองรับโทรศัพท์
+================================= */
+
+@media (max-width: 600px) {
+
+    header {
+        padding: 40px 15px;
+    }
+
+    header h1 {
+        font-size: 25px;
+    }
+
+    header p {
+        font-size: 14px;
+    }
+
+    nav {
+        gap: 6px;
+        padding: 12px 5px;
+    }
+
+    nav a {
+        padding: 9px 12px;
+        font-size: 13px;
+    }
+
+    .banner {
+        margin: 15px auto;
+        padding: 0 12px;
+    }
+
+    .banner img {
+        border-radius: 10px;
+    }
+
+    main {
+        padding: 20px 12px;
+    }
+
+    .hero {
+        padding: 40px 18px;
+    }
+
+    .hero h2 {
+        font-size: 25px;
+    }
+
+    .content {
+        padding: 20px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .ai-logo {
+        width: 95px;
+        height: 95px;
+    }
+
+    .ai-logo img {
+        width: 65px;
+        height: 65px;
+    }
+
+    footer {
+        font-size: 13px;
+    }
+}
